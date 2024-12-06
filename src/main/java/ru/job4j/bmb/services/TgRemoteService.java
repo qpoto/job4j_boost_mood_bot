@@ -20,7 +20,7 @@ public class TgRemoteService extends TelegramLongPollingBot {
 
     private final String botName;
     private final String botToken;
-    private static final Map<String,String> MOOD_RESP = new HashMap<>();
+    private static final Map<String, String> MOOD_RESP = new HashMap<>();
 
     public TgRemoteService(@Value("${telegram.bot.name}") String botName,
                            @Value("${telegram.bot.token}") String botToken) {
@@ -35,7 +35,6 @@ public class TgRemoteService extends TelegramLongPollingBot {
         MOOD_RESP.put("need_coffee", "Кофе уже в пути! Осталось только подождать... И ещё немного подождать...");
         MOOD_RESP.put("sleepy", "Пора на боковую! Даже супергерои отдыхают, ты не исключение.");
     }
-
 
     @Override
     public String getBotToken() {
