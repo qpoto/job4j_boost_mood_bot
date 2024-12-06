@@ -8,7 +8,6 @@ public class User {
     private long clientId;
     private long chatId;
 
-
     public User(Long id, long clientId, long chatId) {
         this.id = id;
         this.clientId = clientId;
@@ -41,8 +40,12 @@ public class User {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         User user = (User) o;
         return clientId == user.clientId && chatId == user.chatId && Objects.equals(id, user.id);
     }
