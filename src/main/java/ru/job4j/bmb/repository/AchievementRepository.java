@@ -1,11 +1,11 @@
-package ru.job4j;
+package ru.job4j.bmb.repository;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ReminderService {
+public class AchievementRepository {
     @PostConstruct
     public void init() {
         System.out.println("Bean is going through @PostConstruct init.");
